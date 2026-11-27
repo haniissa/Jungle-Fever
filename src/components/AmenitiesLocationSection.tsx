@@ -79,7 +79,9 @@ export function AmenitiesLocationSection({
 
             <h3 className="font-display text-2xl lg:text-3xl font-medium text-on-primary">{hub.title}</h3>
 
-            <p className="hidden lg:block text-sm text-emerald-100/85 leading-relaxed">{hub.address}</p>
+            <address className="hidden lg:block not-italic text-sm text-emerald-100/85 leading-relaxed">
+              {hub.address}
+            </address>
 
             {/* Desktop Hours Grid */}
             <div className="hidden lg:grid grid-cols-2 gap-3 pt-2 text-xs">
@@ -149,7 +151,12 @@ export function AmenitiesLocationSection({
             </a>
 
             <div className="hidden lg:block text-center pt-1">
-              <span className="text-[11px] text-emerald-300/85">{hub.directLineNote}</span>
+              <a
+                href={`tel:+${data.brand.whatsappDigits}`}
+                className="text-[11px] text-emerald-300/85 hover:text-white hover:underline transition-colors"
+              >
+                {hub.directLineNote}
+              </a>
             </div>
           </div>
         </div>

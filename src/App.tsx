@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { CAFE_CONTENT, type CafeLocaleData, type Locale } from './data/cafeData';
 import type { OpenStatus, ReservationRecord } from './utils/cafeLogic';
 import { fetchCafePayload, fetchReservations } from './utils/cafeClient';
+import { applySeoMetadata } from './utils/seoMeta';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { MenuSection } from './components/MenuSection';
@@ -31,14 +32,9 @@ export default function App() {
 
   const data = serverData?.lang === lang ? serverData : CAFE_CONTENT[lang];
 
-  // Sync HTML dir, lang, and title for EN (LTR) and AR (RTL)
+  // Sync HTML dir, lang, SEO meta tags, canonical/hreflang links & GBP JSON-LD
   useEffect(() => {
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    document.title =
-      lang === 'ar'
-        ? 'جنغل فيفر للقهوة والشاي | سطح المتحف الوطني الأردني للفنون الجميلة'
-        : 'Jungle Fever Coffee and Tea House | Rooftop at Jordan National Gallery of Fine Arts';
+    applySeoMetadata(lang);
   }, [lang]);
 
   // Fetch live cafe data & Amman open status (Hono API or static GitHub Pages mode)

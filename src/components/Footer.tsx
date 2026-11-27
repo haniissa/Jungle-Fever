@@ -65,7 +65,7 @@ export function Footer({ data }: FooterProps) {
             </div>
 
             {/* Hours & Contact */}
-            <div className="col-span-5 flex flex-col gap-2">
+            <address className="col-span-5 flex flex-col gap-2 not-italic">
               <span className="text-xs uppercase font-bold tracking-wider text-primary mb-1">
                 {data.footer.hoursTitle}
               </span>
@@ -83,9 +83,7 @@ export function Footer({ data }: FooterProps) {
                 <a
                   className="text-secondary font-bold hover:underline"
                   dir="ltr"
-                  href={`https://wa.me/${data.brand.whatsappDigits}`}
-                  rel="noopener noreferrer"
-                  target="_blank"
+                  href={`tel:+${data.brand.whatsappDigits}`}
                 >
                   {data.brand.whatsappNumberDisplay}
                 </a>
@@ -96,7 +94,7 @@ export function Footer({ data }: FooterProps) {
                 </span>
                 {data.footer.parkingNote}
               </p>
-            </div>
+            </address>
           </div>
 
           <div className="pt-6 border-t border-outline-variant/30 flex items-center justify-between gap-4 text-xs text-on-surface-variant">

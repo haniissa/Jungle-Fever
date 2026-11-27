@@ -11,6 +11,15 @@ This repository includes an automated GitHub Actions workflow (`.github/workflow
 3. Under **Build and deployment → Source**, select **GitHub Actions**.
 4. Push a commit (or click **Run workflow** in the **Actions** tab) — your live preview will be published at `https://<your-username>.github.io/<repo-name>/`.
 
+## Google Business Profile & SEO Optimization
+
+The site ships with embedded **Schema.org `CafeOrCoffeeShop` / `LocalBusiness` + `FAQPage` JSON-LD**, local Amman geo meta tags, OpenGraph/Twitter social share cards, bilingual `hreflang` (`en` / `ar`) + dynamic canonical URLs, `robots.txt`, and `sitemap.xml`.
+
+To connect your Google Business Profile once deployed:
+- **Website URL**: `https://<your-username>.github.io/<repo-name>/`
+- **Menu URL**: `https://<your-username>.github.io/<repo-name>/#menu`
+- **WhatsApp / Reservations**: `https://wa.me/962775999303`
+
 ## Running Full-Stack Locally (Hono.js + Vite)
 
 ```bash
