@@ -1,0 +1,131 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: junglefever --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "junglefever";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: #fff8f5;
+  --color-base-200: #fbf2ed;
+  --color-base-300: #f0e6e1;
+  --color-base-content: #1f1b18;
+  --color-primary: #032517;
+  --color-primary-content: #ffffff;
+  --color-secondary: #97472e;
+  --color-secondary-content: #ffffff;
+  --color-accent: #1b3b2b;
+  --color-accent-content: #c7ebd4;
+  --color-neutral: #1f1b18;
+  --color-neutral-content: #fff8f5;
+  --color-info: #456553;
+  --color-info-content: #ffffff;
+  --color-success: #10b981;
+  --color-success-content: #002113;
+  --color-warning: #e08936;
+  --color-warning-content: #2e1500;
+  --color-error: #ba1a1a;
+  --color-error-content: #ffffff;
+  --radius-selector: 9999px;
+  --radius-field: 0.75rem;
+  --radius-box: 1.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@theme {
+  --color-primary: #032517;
+  --color-primary-container: #1b3b2b;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #83a590;
+  --color-primary-fixed: #c7ebd4;
+  --color-primary-fixed-dim: #abcfb8;
+  --color-on-primary-fixed: #002113;
+
+  --color-secondary: #97472e;
+  --color-secondary-container: #fe997a;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #772f18;
+
+  --color-surface: #fff8f5;
+  --color-surface-dim: #e1d8d3;
+  --color-surface-bright: #fff8f5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fbf2ed;
+  --color-surface-container: #f5ece7;
+  --color-surface-container-high: #f0e6e1;
+  --color-surface-container-highest: #eae1dc;
+
+  --color-on-surface: #1f1b18;
+  --color-on-surface-variant: #424843;
+  --color-outline: #727973;
+  --color-outline-variant: #c1c8c2;
+
+  --color-tertiary: #351900;
+  --color-tertiary-fixed: #ffdcc2;
+
+  --font-display-en: "Newsreader", Georgia, serif;
+  --font-body-en: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display-ar: "Amiri", Georgia, serif;
+  --font-body-ar: "Cairo", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body-en);
+  }
+
+  html[dir="rtl"] {
+    font-family: var(--font-body-ar);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    background-color: #fff8f5;
+    color: #1f1b18;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display-en);
+}
+
+html[dir="rtl"] .font-display {
+  font-family: var(--font-display-ar);
+}
+
+.font-body {
+  font-family: var(--font-body-en);
+}
+
+html[dir="rtl"] .font-body {
+  font-family: var(--font-body-ar);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  user-select: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}

@@ -1,11 +1,21 @@
-<div align="center">
+# Jungle Fever Coffee & Tea House
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Bilingual (English LTR / Arabic RTL) web application for **Jungle Fever Coffee & Tea House** atop the Jordan National Gallery of Fine Arts in Jabal Al-Weibdeh, Amman, built with **Hono.js** and **DaisyUI**.
 
-  <h1>Built with AI Studio</h2>
+## Publishing to GitHub Pages (Client Preview)
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+This repository includes an automated GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) that builds a static GitHub Pages preview (`npm run build:pages`) where menu filtering, Arabic/English switching, Amman opening status, and table reservation requests all work directly in the browser (persisted in `localStorage`) with no backend server required.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+1. Push this project to a GitHub repository on the `main` branch.
+2. In your GitHub repository, open **Settings → Pages**.
+3. Under **Build and deployment → Source**, select **GitHub Actions**.
+4. Push a commit (or click **Run workflow** in the **Actions** tab) — your live preview will be published at `https://<your-username>.github.io/<repo-name>/`.
 
-</div>
+## Running Full-Stack Locally (Hono.js + Vite)
+
+```bash
+npm install
+npm run dev
+```
+
+The Hono.js server and Vite frontend run together on `http://localhost:3000`.

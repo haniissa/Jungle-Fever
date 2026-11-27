@@ -1,0 +1,6 @@
+{
+  "name": "Jungle Fever Coffee & Tea House",
+  "description": "Amman's scenic rooftop oasis of art, books, and specialty coffee perched atop the Jordan National Gallery of Fine Arts in Jabal Al-Weibdeh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
