@@ -17,7 +17,8 @@ export const GBP_BUSINESS_PROFILE = {
   telephone: '+962775999303',
   telephoneDisplay: '07 7599 9303',
   whatsappUrl: 'https://wa.me/962775999303',
-  mapsUrl: 'https://maps.google.com/?q=Jungle+Fever+Coffee+and+Tea+House,+Jordan+National+Gallery+of+Fine+Arts,+Amman',
+  mapsUrl:
+    'https://www.google.com/maps/place/Jungle+Fever+Coffee+and+Tea+House/@31.9580697,35.9152344,15z/data=!4m15!1m8!3m7!1s0x151ca077ff973e1b:0x881ef21032a1b057!2sJungle+Fever+Coffee+and+Tea+House!8m2!3d31.9580697!4d35.9152344!10e5!16s%2Fg%2F11dfj4_xrv!3m5!1s0x151ca077ff973e1b:0x881ef21032a1b057!8m2!3d31.9580697!4d35.9152344!16s%2Fg%2F11dfj4_xrv?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D',
   priceRange: '$$',
   currenciesAccepted: 'JOD',
   paymentAccepted: 'Cash, Credit Card, Visa, Mastercard, NFC Mobile Payments, CliQ',
@@ -29,8 +30,8 @@ export const GBP_BUSINESS_PROFILE = {
     addressCountry: 'JO',
   },
   geo: {
-    latitude: 31.9566,
-    longitude: 35.9154,
+    latitude: 31.9580697,
+    longitude: 35.9152344,
   },
   socialImage: CAFE_IMAGES.terraceMain,
 } as const;

@@ -38,8 +38,9 @@ test('buildGoogleBusinessProfileJsonLd outputs CafeOrCoffeeShop, Menu, Hours, Ge
   assert.equal(business.currenciesAccepted, 'JOD');
 
   const geo = business.geo as { latitude: number; longitude: number };
-  assert.equal(geo.latitude, 31.9566);
-  assert.equal(geo.longitude, 35.9154);
+  assert.equal(geo.latitude, 31.9580697);
+  assert.equal(geo.longitude, 35.9152344);
+  assert.equal(business.hasMap, GBP_BUSINESS_PROFILE.mapsUrl);
 
   const menu = business.hasMenu as { hasMenuSection: Array<{ hasMenuItem: unknown[] }> };
   assert.equal(menu.hasMenuSection.length, 3);
